@@ -8,25 +8,17 @@ const int N = 100;
 int main()
 {
 	char FileName[N] = "1.txt";
-	cout << "Enter the name of file: ";
-	//cin >> FileName;
-
 	char FileName1[N] = "2.txt";
-	cout << "Enter the name of file: ";
-	//cin >> FileName1;
 	char NewFileName[N] = "3.txt";
-	cout << "Enter the name of new file: ";
-	//cin >> NewFileName;
-	cout << endl;
 	EnterNewFile(FileName, FileName1, NewFileName);
 	system("pause");
 	return 0;
 }
 ofstream EnterNewFile(char* File1, char* File2, char* NewFile)
 {
-	ifstream Arr(File1, ios_base::in);
-	ifstream Arr1(File2, ios_base::in);
-	ofstream Arr2(NewFile, ios_base::out);
+	ifstream Arr(File1);
+	ifstream Arr1(File2);
+	ofstream Arr2(NewFile);
 	int a = 0, b = 0, c = 0, d = 0;
 	while (!Arr.eof()&&!Arr.eof())
 	{
